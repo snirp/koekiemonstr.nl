@@ -99,3 +99,17 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+
+# ========================= #
+# custom / project specific #
+# ========================= #
+
+# Pycharm settings
+.idea/
+
+# Github pages folder
+.gh-pages/
+
+
+.DS_Store
