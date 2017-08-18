@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Koekiemonstr</title>
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+  
+  
+  
+</head>
+
+<body>
+
+<header class="container my-4 py-4">
+  
+<div class="row">
+  <div class="col-2">
+    <a href="index.html">
+      <img src="static/img/icon.png" id="home">
+    </a>
+  </div>
+  <div class="col-10 text-center">
+    <h1>Tompouce</h1>
+  </div>
+</div>
+
+</header>
+
+<main class="container py-4">
+
+<div class="row">
+  <div class="col-12 col-md-4">
+    <h3>Ingrediënten</h3>
+
+    <h4>Tompoezen</h4>
+    <ul>
+      <li>16 plakjes bladerdeeg</li>
+    </ul>
+
+    <h4>Banketbakkersroom</h4>
+    <ul>
+      <li>500 g melk</li>
+      <li>100 g suiker</li>
+      <li>1  vanillestokje</li>
+      <li>4  eidooiers</li>
+      <li>3 el bloem</li>
+      <li>250 ml room</li>
+      <li>2 blaadjes gelatine</li>
+    </ul>
+
+    <h4>Garneren</h4>
+    <ul>
+      <li>3 el bietensap</li>
+      <li>150 g poedersuiker</li>
+      <li>150 ml slagroom</li>
+      <li>1.5 el suiker</li>
+    </ul>
+    <h4>Extra nodig</h4>
+    <ul>
+        <li>spuitzakken</li>
+    </ul>
+  </div>
+  <div class="col-12 col-md-8">
+    <h3>Bereiding</h3>
+    <p>Ontdooi het bladerdeeg en leg 2 plakjes op elkaar. Rol de plakjes uit en prik ze in met een vork. Snijd de randjes recht en snijd de plakjes doormidden. Leg het deeg op een met bakpapier beklede bakplaat en laat het deeg circa 10 minuten rusten.</p>
+    <p>Verwarm de oven voor op 180 ºC.</p>
+    <p>Bak het bladerdeeg in de oven in circa 20 minuten goudbruin en gaar. Laat het bladerdeeg afkoelen.</p>
+
+    <h4>Banketbakkersroom</h4>
+    <p>Breng 450 ml melk met de suiker aan de kook. Halveer het vanillestokje in de lengte, schraap het merg eruit en meng het merg met de eidooiers. Roer de resterende melk door de eidooiers en roer de bloem erdoor. Roer het eimengsel door de kokende melk en kook circa 2 minuten door. Spoel een bakplaatje af met koud water, schenk de banketbakkersroom erop en laat afgedekt met plastic folie afkoelen.</p>
+    <p>Klop de slagroom stijf en week de gelatine in koud water.</p>
+    <p>Roer de banketbakkersroom los in een kom. Smelt de gelatine in een pannetje en roer de gelatine door de banketbakkersroom.</p>
+    <p>Spatel de room erdoor en laat de banketbakkersroom opstijven in de koelkast.</p>
+
+    <h4>Garneren</h4>
+    <p>Roer het bietensap door de poedersuiker en bestrijk de bovenkant van 8 plakjes bladerdeeg ermee. Klop de slagroom stijf met de suiker. Schep de banketbakkersroom in een spuitzak en spuit banen op de 8 resterende plakjes bladerdeeg. Leg de kapjes erop en spuit er een baan slagroom op.</p>
+  </div>
+</div>
+
+
+</main>
+
+<footer>
+
+
+</footer>
+
+<img src="static/img/monster.png" id="monster">
+
+
+
+
+
+<script>
+  function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) === ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) === 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return null;
+  }
+
+  function deleteAllCookies() {
+    var cookies = document.cookie.split(";");
+
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var eqPos = cookie.indexOf("=");
+        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+    }
+    window.location.reload(false);
+}
+
+</script>
+
+
+<script>
+var timestamp = Math.floor(Date.now() / 1000);
+</script>
+
+
+<script>
+  document.cookie = "snack4time=" + timestamp + "; expires=Thu, 2 Jan 2020 12:00:00 UTC; path=/";
+  var count = getCookie("snack1count");
+  if (count === null ){
+    count = 1
+  } else {
+    count = parseInt(count) + 1;
+  }
+  document.cookie = "snack4count=" + count + "; expires=Thu, 2 Jan 2020 12:00:00 UTC; path=/";
+</script>
+
+</body>
+</html>
