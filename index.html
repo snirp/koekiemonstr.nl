@@ -129,7 +129,7 @@
 
   // append the images to the HTML
   for (var i = 0; i < snacktimes.length; i++) {
-    var imgstring = '<img class="cookie" id="cookie'+(i+1)+'" src="' + "/static/img/" + snacks[snacktimes[i][0]] + '">';
+    var imgstring = '<img class="cookie" id="cookie'+(i+1)+'" src="' + "static/img/" + snacks[snacktimes[i][0]] + '">';
     console.log(imgstring);
     // TODO use DOM methods instead of string
     document.body.innerHTML = document.body.innerHTML + imgstring;
